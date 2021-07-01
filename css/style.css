@@ -13,7 +13,6 @@
 
 /* container-layout */
 .container-layout{
-    border: 1px solid black;
     height: 100%;
     
 }
@@ -35,4 +34,18 @@
 #notify-allert{
     height: 70px;
     background: aqua;
+}
+.notify-icon{
+    height: 50px;
+    flex-basis: 75px;
+}
+.notify-icon .icon{
+    color: lightblue;
+    background-color: #fff;
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+}
+.notify-icon .icon i{
+    font-size: 25px;
 }

@@ -27,20 +27,31 @@
                         </div>
     
                         <div class="col-3 d-none d-lg-flex justify-content-between" id="user-settings" >
-                            <i class="fas fa-circle-notch"></i>
+                            <i @click="addNotify()" id="notify-button" class="fas fa-bell"></i>
                             <i class="fas fa-comment-alt"></i>
                             <i class="fas fa-ellipsis-v"></i>
                         </div>
     
                     </div>
 
-                    <div v-if="dontShowNotify"  class="" id="notify-allert">
+                    <div v-if="dontShowNotify"  class="row align-items-center justify-content-center" id="notify-allert">
+
+                        <div class=" notify-icon">
+                            <div class="d-flex align-items-center justify-content-center icon">
+                                <i class="fas fa-bell-slash"></i>
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <h6>Ricevi notifiche di nuovi messaggi</h6>
+                            <span><a href="">Attiva notifiche desktop </a></span>
+                        </div>
                         
                     </div>
-                    <button @click="addNotify()" id="notify-button"><i class="fas fa-bell"></i></button>
 
                     <div class="">
-                        ciao</div>
+                        ciao
+                    </div>
                     
 
                 </div>
