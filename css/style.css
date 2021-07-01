@@ -17,7 +17,7 @@
     height: 100%;
     
 }
-/* container-layout /// aside-bar-left */
+/* container-layout /// aside-bar-left ///user-space */
 #user-space {
     height: 70px;
     background-color: #ddd;
@@ -29,4 +29,10 @@
 #user-settings i {
     color: gray;
     font-size: 25px;
+}
+
+/* container-layout /// aside-bar-left ///notify-allert */
+#notify-allert{
+    height: 70px;
+    background: aqua;
 }
