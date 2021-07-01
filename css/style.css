@@ -1,0 +1,16 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    background-image: linear-gradient(green ,#eee );
+    height: 100vh;
+    padding: 15px 15px;
+}
+/* container-master */
+.container-master{
+    border: 1px solid black;
+    
+    
+}
