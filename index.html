@@ -26,7 +26,7 @@
                             <span> <b>{{user.name}} {{user.surname}}</b></span>
                         </div>
     
-                        <div class="col-3 d-none d-lg-flex justify-content-between" id="user-settings" >
+                        <div class="col-4 d-none d-lg-flex justify-content-between" id="user-settings" >
                             <i @click="addNotify()" id="notify-button" class="fas fa-bell"></i>
                             <i class="fas fa-comment-alt"></i>
                             <i class="fas fa-ellipsis-v"></i>
@@ -34,7 +34,7 @@
     
                     </div>
 
-                    <div v-if="dontShowNotify"  class="row align-items-center justify-content-center" id="notify-allert">
+                    <div v-if="dontShowNotify"  class="row d-none d-lg-flex align-items-center justify-content-center" id="notify-allert">
 
                         <div class=" notify-icon">
                             <div class="d-flex align-items-center justify-content-center icon">
