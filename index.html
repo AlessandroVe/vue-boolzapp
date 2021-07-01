@@ -19,12 +19,14 @@
                     
                     <div class="row align-items-center " id="user-space">
     
-                        <div class="col" id="user">
-                            <img :src="user.avatar" alt="">
+                        <div class="col d-flex align-items-center" id="user">
+                            <div>
+                                <img :src="user.avatar" alt="">
+                            </div>
                             <span> <b>{{user.name}} {{user.surname}}</b></span>
                         </div>
     
-                        <div class="col-3 d-flex justify-content-between" id="user-settings" >
+                        <div class="col-3 d-none d-lg-flex justify-content-between" id="user-settings" >
                             <i class="fas fa-circle-notch"></i>
                             <i class="fas fa-comment-alt"></i>
                             <i class="fas fa-ellipsis-v"></i>
