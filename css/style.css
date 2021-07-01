@@ -55,7 +55,7 @@
 /* container-layout /// aside-bar-left ///contacts-space  */
 #contacts-space{
     background-color: #fff;
-    height: calc() 10;
+    height: 100%;
 }
 .search-contacts {
     margin-top: 15px;
