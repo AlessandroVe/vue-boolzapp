@@ -27,5 +27,6 @@
     border-radius: 50px;
 }
 #user-settings i {
+    color: gray;
     font-size: 25px;
 }

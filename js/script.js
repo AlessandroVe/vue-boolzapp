@@ -1,6 +1,7 @@
 const app =  new Vue({
     el:"#app",
     data:{
+        dontShowNotify:true,
         user:{
             name:"Nome",
             surname:"Utente",
@@ -95,7 +96,6 @@ const app =  new Vue({
 
     },
     created(){
-        
 
 
     },
@@ -103,6 +103,18 @@ const app =  new Vue({
         
     },
     methods:{
+        addNotify:function(){
+            let notify_button =document.getElementById("notify-button");
+
+            if(this.dontShowNotify){
+                this.dontShowNotify=false
+                notify_button.innerHTML= `Disattiva  notifiche`
+            }else{
+                this.dontShowNotify=true     
+                notify_button.innerHTML= `Attiva notifiche`
+
+            }
+        }
 
         
     }

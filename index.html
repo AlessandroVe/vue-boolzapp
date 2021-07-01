@@ -34,8 +34,10 @@
     
                     </div>
 
-                    <div class=""></div>
-                    <div class="">ciao</div>
+                    <div v-if="dontShowNotify" class="">ciao</div>
+                    <div class="">
+                        <button @click="addNotify()" id="notify-button">Attiva notifiche</button>
+                        ciao</div>
                     
 
                 </div>
