@@ -108,11 +108,10 @@ const app =  new Vue({
 
             if(this.dontShowNotify){
                 this.dontShowNotify=false
-                notify_button.innerHTML= `Disattiva  notifiche`
+                notify_button.innerHTML= `<i class="fas fa-bell-slash"></i>`
             }else{
                 this.dontShowNotify=true     
-                notify_button.innerHTML= `Attiva notifiche`
-
+                notify_button.innerHTML= `<i class="fas fa-bell"></i>`
             }
         }
 

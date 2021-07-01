@@ -34,9 +34,12 @@
     
                     </div>
 
-                    <div v-if="dontShowNotify" class="">ciao</div>
+                    <div v-if="dontShowNotify"  class="" id="notify-allert">
+                        no
+                    </div>
+                    <button @click="addNotify()" id="notify-button"><i class="fas fa-bell"></i></button>
+
                     <div class="">
-                        <button @click="addNotify()" id="notify-button">Attiva notifiche</button>
                         ciao</div>
                     
 
