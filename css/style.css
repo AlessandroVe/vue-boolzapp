@@ -11,6 +11,6 @@ body{
 /* container-master */
 .container-master{
     border: 1px solid black;
-    
+    height: 100%;
     
 }
