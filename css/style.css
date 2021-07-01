@@ -5,7 +5,7 @@
 }
 #container-master{
     background: rgb(66,148,136);
-    background: linear-gradient(180deg, rgba(66,148,136,1) 20%, rgba(219,219,211,1) 20%);
+    background: linear-gradient(180deg, rgba(66,148,136,1) 20%, #ccc 20%);
     background-repeat:no-repeat;
     height: 100vh;
     padding: 30px 30px;
@@ -18,6 +18,10 @@
     
 }
 /* container-layout /// aside-bar-left */
+#user-space {
+    height: 70px;
+    background-color: #ddd;
+}
 #user-space img{
     width: 50px;
     border-radius: 50px;
