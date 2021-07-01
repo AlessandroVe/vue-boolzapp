@@ -10,9 +10,7 @@
     height: 100vh;
     padding: 30px 30px;
 }
-#app{
-    height: 100%;
-}
+
 /* container-layout */
 .container-layout{
     border: 1px solid black;
