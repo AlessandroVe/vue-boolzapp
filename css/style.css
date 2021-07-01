@@ -22,7 +22,11 @@
     height: 70px;
     background-color: #ddd;
 }
-#user-space img{
+
+#user img{
     width: 50px;
     border-radius: 50px;
+}
+#user-settings i {
+    font-size: 25px;
 }

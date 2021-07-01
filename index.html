@@ -16,24 +16,25 @@
         <div  class="container  container-layout" id="app">
             <div class="row">
                 <div class=" col-4" id="aside-bar-left">
-                    <div class="row">
-                        <div class="d-flex   justify-content-between align-items-center " id="user-space">
+                    
+                    <div class="row align-items-center " id="user-space">
     
-                            <div>
-                                <img :src="user.avatar" alt="">
-                                <span> <b>{{user.name}} {{user.surname}}</b></span>
-                            </div>
-    
-                            <div>
-                                <i class="fas fa-circle-notch"></i>
-                                <i class="fas fa-comment-alt"></i>
-                                <i class="fas fa-ellipsis-v"></i>
-                            </div>
-    
+                        <div class="col" id="user">
+                            <img :src="user.avatar" alt="">
+                            <span> <b>{{user.name}} {{user.surname}}</b></span>
                         </div>
-                        <div class="">ciao</div>
-                        <div class="">ciao</div>
+    
+                        <div class="col-3 d-flex justify-content-between" id="user-settings" >
+                            <i class="fas fa-circle-notch"></i>
+                            <i class="fas fa-comment-alt"></i>
+                            <i class="fas fa-ellipsis-v"></i>
+                        </div>
+    
                     </div>
+
+                    <div class=""></div>
+                    <div class="">ciao</div>
+                    
 
                 </div>
                 <div class=" col-6 " id="aside-bar-right">
