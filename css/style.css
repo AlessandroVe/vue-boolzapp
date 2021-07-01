@@ -13,9 +13,12 @@
 
 /* container-layout */
 .container-layout{
-    height: 100%;
-    
+    height: 100%;  
 }
+.container-layout>.row{
+    height: 100%;  
+}
+
 /* container-layout /// aside-bar-left ///user-space */
 #user-space {
     height: 70px;
@@ -48,4 +51,19 @@
 }
 .notify-icon .icon i{
     font-size: 25px;
+}
+/* container-layout /// aside-bar-left ///contacts-space  */
+#contacts-space{
+    background-color: #fff;
+    max-height: 100%;
+}
+.search-contacts {
+    margin-top: 15px;
+}
+.search-contacts input{
+    border: none;
+}
+.search-icon{
+    color: grey;
+    width: 30px;
 }

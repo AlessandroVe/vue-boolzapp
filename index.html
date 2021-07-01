@@ -17,7 +17,7 @@
             <div class="row">
                 <div class=" col-4" id="aside-bar-left">
                     
-                    <div class="row align-items-center " id="user-space">
+                    <section class="row align-items-center " id="user-space">
     
                         <div class="col d-flex align-items-center" id="user">
                             <div>
@@ -32,9 +32,9 @@
                             <i class="fas fa-ellipsis-v"></i>
                         </div>
     
-                    </div>
+                    </section>
 
-                    <div v-if="dontShowNotify"  class="row d-none d-lg-flex align-items-center justify-content-center" id="notify-allert">
+                    <section v-if="dontShowNotify"  class="row d-none d-lg-flex align-items-center justify-content-center" id="notify-allert">
 
                         <div class=" notify-icon">
                             <div class="d-flex align-items-center justify-content-center icon">
@@ -47,11 +47,25 @@
                             <span><a href="">Attiva notifiche desktop </a></span>
                         </div>
                         
-                    </div>
+                    </section>
 
-                    <div class="">
-                        ciao
-                    </div>
+                    <section class="row" id="contacts-space">
+
+                        <div class="col-12 d-flex search-contacts">
+
+                            <div class="search-icon">
+                                <i class="fas fa-search"></i>
+                            </div>
+
+                            <input class="col" placeholder="Cerca o inizia una nuova chat" type="text">
+
+                        </div>
+
+                        <div class="col-12">
+                            container-layout
+                        </div>
+                        
+                    </section>
                     
 
                 </div>
