@@ -113,6 +113,11 @@ const app =  new Vue({
                 this.dontShowNotify=true     
                 notify_button.className= `fas fa-bell`
             }
+        },
+        showMessage:function(messages){
+            messages.forEach(element => {
+                console.log(element.text)
+            });
         }
 
         

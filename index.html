@@ -59,33 +59,14 @@
                         </div>
 
                         <div id="contacts-container">
-                            <div v-for="contact in contacts" class="contact" >
+                            <div v-for="contact in contacts" @click="showMessage(contact.messages)" class="contact" >
                                 <div class="avatar-contact">
                                     <img :src="'./img/avatar' + contact.avatar + '.jpg'" alt="">
                                 </div>
                                 {{contact.name}}
-
                             </div>
-                            <div v-for="contact in contacts" class="contact" >
-                                <div class="avatar-contact">
-                                    <img :src="'./img/avatar' + contact.avatar + '.jpg'" alt="">
-                                </div>
-                                {{contact.name}}
+                        </div>    
 
-                            </div>                            <div v-for="contact in contacts" class="contact" >
-                                <div class="avatar-contact">
-                                    <img :src="'./img/avatar' + contact.avatar + '.jpg'" alt="">
-                                </div>
-                                {{contact.name}}
-
-                            </div>                            <div v-for="contact in contacts" class="contact" >
-                                <div class="avatar-contact">
-                                    <img :src="'./img/avatar' + contact.avatar + '.jpg'" alt="">
-                                </div>
-                                {{contact.name}}
-
-                            </div>
-                        </div>
 
 
                         
