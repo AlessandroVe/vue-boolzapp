@@ -21,7 +21,8 @@
 
 /* container-layout /// aside-bar-left ///user-space */
 #user-space {
-    height: 70px;
+    flex-basis: 70px;
+    flex-shrink: 0;
     background-color: #ddd;
 }
 #user img{
@@ -35,7 +36,8 @@
 
 /* container-layout /// aside-bar-left ///notify-allert */
 #notify-allert{
-    height: 70px;
+    flex-basis: 70px;
+    flex-shrink: 0;
     background: aqua;
 }
 .notify-icon{
@@ -55,15 +57,25 @@
 /* container-layout /// aside-bar-left ///contacts-space  */
 #contacts-space{
     background-color: #fff;
-    height: calc(100% - 140px) ;
 }
 .search-contacts {
-    margin-top: 15px;
+    flex-basis: 25px;
+    margin: 15px 0px ;;
 }
 .search-contacts input{
     border: none;
+    max-width: 350px;
 }
 .search-icon{
+    flex-basis: 30px;
+    flex-shrink: 0;
+
     color: grey;
-    width: 30px;
+}
+#contacts-container{
+    background-color: grey;
+}
+.contact{
+    flex-basis: 50px;
+    flex-shrink: 0;
 }

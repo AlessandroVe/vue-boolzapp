@@ -15,7 +15,7 @@
     <div id="container-master" >
         <div  class="container  container-layout" id="app">
             <div class="row">
-                <div class=" col-4" id="aside-bar-left">
+                <div class="d-flex flex-column col-4" id="aside-bar-left">
                     
                     <section class="row align-items-center " id="user-space">
     
@@ -49,21 +49,24 @@
                         
                     </section>
 
-                    <section class="row" id="contacts-space">
+                    <section class="col row flex-column " id="contacts-space">
 
-                        <div class="col-12 search-contacts">
-
-                            <div class="search-icon">
+                        <div class=" row search-contacts">
+                            <div class=" search-icon">
                                 <i class="fas fa-search"></i>
                             </div>
+                            <input class="col" placeholder="Cerca o inizia una nuova chat" type="text">
+                        </div>
 
-                            <input class="" placeholder="Cerca o inizia una nuova chat" type="text">
+                        <div v-for="contact in contacts" class="col" id="contacts-container">
+                            <div class="contact" >
+                                {{contact.name}}
+                            </div>
+
 
                         </div>
 
-                        <div class="">
-                            container-layout
-                        </div>
+
                         
                     </section>
                     
