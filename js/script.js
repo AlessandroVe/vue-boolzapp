@@ -133,7 +133,7 @@ const app =  new Vue({
 
 
 
-            /*  stampa dei messaggio */
+            /*  stampa dei messaggi */
             var chat =  document.getElementById("chat");
             contact.messages.forEach(element => {
                 chat.innerHTML+= `${element.text} </br> `
