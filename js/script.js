@@ -115,6 +115,8 @@ const app =  new Vue({
             }
         },
         showMessage:function(contact){
+            
+
             let contactSelected =  document.getElementById("last-contact-name");
             contactSelected.innerHTML= contact.name;
 
@@ -129,9 +131,9 @@ const app =  new Vue({
             let contactSelectedAvatar =  document.getElementById("last-contact-avatar");
             contactSelectedAvatar.innerHTML=`<img  src="./img/avatar${contact.avatar}.jpg" alt="">`
 
-
+            var chat =  document.getElementById("chat");
             contact.messages.forEach(element => {
-                console.log(element.text)
+                chat.innerHTML+= `${element.text} </br> `
             });
         }
 
