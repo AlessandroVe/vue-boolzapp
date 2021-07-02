@@ -72,8 +72,14 @@ p , h6{
 }
 #contacts-container{
     background-color: #fff;
+
 }
-.contact{
+.avatar-contact{
+    width: 50px;
+}
+.avatar-contact img{
+    width: 100%;
+    border-radius: 50px;
 }
 /* container-layout /// aside-bar-right ///last-contact-selected*/
 #last-contact-selected{
