@@ -1,7 +1,6 @@
-*{
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
+
+p , h6{
+    margin: 0;
 }
 #container-master{
     background: rgb(66,148,136);
@@ -73,9 +72,59 @@
     color: grey;
 }
 #contacts-container{
-    background-color: grey;
+    background-color: #fff;
 }
 .contact{
     flex-basis: 50px;
     flex-shrink: 0;
+}
+/* container-layout /// aside-bar-right ///last-contact-selected*/
+#last-contact-selected{
+    flex-basis: 70px;
+    flex-shrink: 0;
+    background-color: #ddd;
+}
+#last-contact img{
+    width: 50px;
+    border-radius: 50px;
+}
+#last-contact-specs{
+    margin-left: 15px;
+}
+#chat-setting > i {
+    color: grey;
+    margin-right: 10px;
+    font-size: 25px;
+}
+/* /* container-layout /// aside-bar-right ///chat*/ 
+#chat{
+    background-image: url(../img/mine.jpg);
+}
+
+/* /* container-layout /// aside-bar-right ///input-chat*/ 
+#input-chat{
+    flex-basis: 70px;
+    flex-shrink: 0; 
+    background-color: #eee;
+
+}
+#send-icon , #send-vocal {
+    flex-basis: 40px;
+    flex-shrink: 0px;
+    font-size: 25px;
+    color: grey;
+
+}
+#write-text{
+    height: 80%;
+    margin: 5px, 15px;
+    background-color: white;
+    border-radius: 5px;
+
+}
+#write-text input{
+    border-radius: 5px;
+    height: 100%;
+    width: 100%;
+    border: none;
 }
