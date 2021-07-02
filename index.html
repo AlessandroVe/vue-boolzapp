@@ -59,7 +59,7 @@
                         </div>
 
                         <div id="contacts-container">
-                            <div v-for="contact in contacts" @click="showMessage(contact.messages)" class="contact" >
+                            <div v-for="contact in contacts" @click="showMessage(contact)" class="contact" >
                                 <div class="avatar-contact">
                                     <img :src="'./img/avatar' + contact.avatar + '.jpg'" alt="">
                                 </div>
@@ -77,12 +77,12 @@
 
                     <div class="d-flex align-items-center justify-content-between" id="last-contact-selected">
                         <div class="d-flex" id="last-contact">
-                            <div>
-                                <img src="./img/avatar_1.jpg" alt="">
+                            <div id="last-contact-avatar">
+                                
                             </div>
                             <div id="last-contact-specs">
-                                <h6>Michele</h6>
-                                <p>Ultimo accesso oggi alle</p>
+                                <h6 id="last-contact-name"></h6>
+                                <p> <span id="lastAccess" ></span></p>
                             </div>
                         </div>
                         <div id="chat-setting">

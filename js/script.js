@@ -114,8 +114,23 @@ const app =  new Vue({
                 notify_button.className= `fas fa-bell`
             }
         },
-        showMessage:function(messages){
-            messages.forEach(element => {
+        showMessage:function(contact){
+            let contactSelected =  document.getElementById("last-contact-name");
+            contactSelected.innerHTML= contact.name;
+
+
+
+            let lastAccess =  document.getElementById("lastAccess");
+            let lastDate = contact.messages.length-1
+            lastAccess.innerHTML= `Ultimo accesso ${contact.messages[lastDate].date} `;
+
+
+
+            let contactSelectedAvatar =  document.getElementById("last-contact-avatar");
+            contactSelectedAvatar.innerHTML=`<img  src="./img/avatar${contact.avatar}.jpg" alt="">`
+
+
+            contact.messages.forEach(element => {
                 console.log(element.text)
             });
         }
