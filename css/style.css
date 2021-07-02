@@ -74,10 +74,13 @@ p , h6{
     background-color: #fff;
     overflow: auto;
     flex-basis: calc(100vh - 240px);
-
+}
+.contact{
+    margin: 15px 0px;
 }
 .avatar-contact{
     width: 50px;
+    display: inline-block;
 }
 .avatar-contact img{
     width: 100%;
