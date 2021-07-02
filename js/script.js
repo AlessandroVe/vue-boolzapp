@@ -131,6 +131,9 @@ const app =  new Vue({
             let contactSelectedAvatar =  document.getElementById("last-contact-avatar");
             contactSelectedAvatar.innerHTML=`<img  src="./img/avatar${contact.avatar}.jpg" alt="">`
 
+
+
+            /*  stampa dei messaggio */
             var chat =  document.getElementById("chat");
             contact.messages.forEach(element => {
                 chat.innerHTML+= `${element.text} </br> `
