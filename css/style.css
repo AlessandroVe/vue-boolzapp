@@ -58,17 +58,16 @@ p , h6{
     background-color: #fff;
 }
 .search-contacts {
+    border: .5px solid rgb(231, 231, 231);
     flex-basis: 25px;
-    margin: 15px 0px ;;
+    margin: 15px 15px ;
 }
 .search-contacts input{
     border: none;
-    max-width: 350px;
 }
 .search-icon{
     flex-basis: 30px;
     flex-shrink: 0;
-
     color: grey;
 }
 #contacts-container{
