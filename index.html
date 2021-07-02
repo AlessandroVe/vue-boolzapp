@@ -58,8 +58,9 @@
                             <input class="col" placeholder="Cerca o inizia una nuova chat" type="text">
                         </div>
 
-                        <div v-for="contact in contacts" class="col" id="contacts-container">
-                            <div class="contact" >
+                        <div  class="col" id="contacts-container">
+                            <div v-for="contact in contacts" class="contact" >
+                                <div></div>
                                 {{contact.name}}
                             </div>
                         </div>

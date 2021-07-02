@@ -74,8 +74,6 @@ p , h6{
     background-color: #fff;
 }
 .contact{
-    flex-basis: 50px;
-    flex-shrink: 0;
 }
 /* container-layout /// aside-bar-right ///last-contact-selected*/
 #last-contact-selected{
