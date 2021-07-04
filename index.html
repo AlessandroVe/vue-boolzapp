@@ -14,6 +14,7 @@
 
     <div id="container-master" >
         <div  class="container  container-layout" id="app">
+            
             <div class="row">
                 <div class="d-flex flex-column col-4" id="aside-bar-left">
                     
@@ -59,11 +60,11 @@
                         </div>
 
                         <div id="contacts-container">
-                            <div v-for="contact in contacts" @click="showMessage(contact)" class="contact" >
+                            <div v-for="(contact , index) in contacts" @click="showMessage(contact,index)" class="contact" >
                                 <div class="avatar-contact">
                                     <img :src="'./img/avatar' + contact.avatar + '.jpg'" alt="">
                                 </div>
-                                {{contact.name}}
+                                {{contact.name}} {{index}}
                             </div>
                         </div>    
 
@@ -73,16 +74,17 @@
                     </section>
                     
                 </div>
+
                 <div class="row flex-column col-8 " id="aside-bar-right">
 
                     <div class="d-flex align-items-center justify-content-between" id="last-contact-selected">
                         <div class="d-flex" id="last-contact">
                             <div id="last-contact-avatar">
-                                
+                                <img :src="'./img/avatar' + contacts[indexContact].avatar + '.jpg'" alt="">  
                             </div>
                             <div id="last-contact-specs">
-                                <h6 id="last-contact-name"></h6>
-                                <p> <span id="lastAccess" ></span></p>
+                                <h6>{{contacts[indexContact].name}}</h6>
+                                <p> <span id="lastAccess" >Ultimo accesso {{contacts[indexContact].messages[messagesIndex].date}}</span></p>
                             </div>
                         </div>
                         <div id="chat-setting">
@@ -93,7 +95,12 @@
                     </div>
 
                     <div class="col" id="chat">
-                        
+                        <div v-for="message in contacts[indexContact].messages" :class="message.status">
+                            {{message.text}}
+                            <div>
+                                {{message.date}}
+                            </div>
+                        </div>
                     </div>
 
                     <div class="d-flex d-flex align-items-center" id="input-chat">
@@ -112,11 +119,7 @@
                     </div>
                 </div>
             </div>
-        
-        
-            
-        
-        
+             
         </div>
     </div>
 

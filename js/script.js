@@ -2,6 +2,8 @@ const app =  new Vue({
     el:"#app",
     data:{
         dontShowNotify:true,
+        indexContact:0,
+        messagesIndex: 0, /* this.contacts[this.indexContact].messages.length - 1, */ /* problema ad inpostare l'ultimo accesso del contatto alla creazione della pagina */
         user:{
             name:"Nome",
             surname:"Utente",
@@ -97,7 +99,7 @@ const app =  new Vue({
     },
     created(){
 
-
+        
     },
     mounted(){
         
@@ -114,31 +116,16 @@ const app =  new Vue({
                 notify_button.className= `fas fa-bell`
             }
         },
-        showMessage:function(contact){
+        showMessage:function(contact,index){
+           this.messagesIndex = contact.messages.length-1 
+
+            this.indexContact = index
+            console.log(this.indexContact)
             
 
-            let contactSelected =  document.getElementById("last-contact-name");
-            contactSelected.innerHTML= contact.name;
+        },
+        
 
-
-
-            let lastAccess =  document.getElementById("lastAccess");
-            let lastDate = contact.messages.length-1
-            lastAccess.innerHTML= `Ultimo accesso ${contact.messages[lastDate].date} `;
-
-
-
-            let contactSelectedAvatar =  document.getElementById("last-contact-avatar");
-            contactSelectedAvatar.innerHTML=`<img  src="./img/avatar${contact.avatar}.jpg" alt="">`
-
-
-
-            /*  stampa dei messaggi */
-            var chat =  document.getElementById("chat");
-            contact.messages.forEach(element => {
-                chat.innerHTML+= `${element.text} </br> `
-            });
-        }
 
         
     }
