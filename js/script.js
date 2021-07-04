@@ -3,7 +3,9 @@ const app =  new Vue({
     data:{
         dontShowNotify:true,
         indexContact:0,
+        massageInput:" ",
         messagesIndex: 0, /* this.contacts[this.indexContact].messages.length - 1, */ /* problema ad inpostare l'ultimo accesso del contatto alla creazione della pagina */
+        search:"",
         user:{
             name:"Nome",
             surname:"Utente",
@@ -99,12 +101,32 @@ const app =  new Vue({
     },
     created(){
 
-        
+    
     },
     mounted(){
         
     },
+    computed: {
+        filteredAndSorted(){
+         // function to compare names
+         function compare(a, b) {
+           if (a.name < b.name) return -1;
+           if (a.name > b.name) return 1;
+           return 0;
+         }
+          
+         return this.contacts.filter(user => {
+            return user.name.toLowerCase().includes(this.search.toLowerCase())
+         }).sort(compare)
+        }
+    },
     methods:{
+        getCurrentDateTime: function () {
+              
+            const dateTimeNow = dayjs();
+            return dateTimeNow.format("DD/MM/YYYY HH:mm:ss");
+            
+        },
         addNotify:function(){
             let notify_button =document.getElementById("notify-button");
 
@@ -117,14 +139,36 @@ const app =  new Vue({
             }
         },
         showMessage:function(contact,index){
-           this.messagesIndex = contact.messages.length-1 
+           /* this.messagesIndex = contact.messages.length-1  */
 
             this.indexContact = index
             console.log(this.indexContact)
             
         },
-        
+        sendMessage:function(){
 
+            this.contacts[indexContact].messages.push(
+                {
+                date: getCurrentDateTime() ,
+                text: this.massageInput,
+                status: 'sent',
+            });
+
+            console.log(this.contacts[indexContact].messages)
+
+            this.massageInput = "";
+
+            setInterval(function(){
+                this.contacts[indexContact].messages.push(
+                    {
+                    date: getCurrentDateTime(),
+                    text: "ciao",
+                    status: 'received',
+                });
+            },1000)
+        },
+
+        
 
         
     }

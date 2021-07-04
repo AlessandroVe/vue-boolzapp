@@ -8,6 +8,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
     <title>Boolzapp</title>
 </head>
 <body>
@@ -56,17 +57,17 @@
                             <div class=" search-icon">
                                 <i class="fas fa-search"></i>
                             </div>
-                            <input class="col" placeholder="Cerca o inizia una nuova chat" type="text">
+                            <input class="col" placeholder="Cerca o inizia una nuova chat" v-model="search" type="text">
                         </div>
 
-                        <div id="contacts-container">
-                            <div v-for="(contact , index) in contacts" @click="showMessage(contact,index)" class="contact" >
+                        <ul id="contacts-container">
+                            <li v-for="(contact , index) in filteredAndSorted" @click="showMessage(contact,index)" class="contact" >
                                 <div class="avatar-contact">
                                     <img :src="'./img/avatar' + contact.avatar + '.jpg'" alt="">
                                 </div>
-                                {{contact.name}} {{index}}
-                            </div>
-                        </div>    
+                                {{contact.name}} 
+                            </li>
+                        </ul>    
 
 
 
@@ -80,11 +81,11 @@
                     <div class="d-flex align-items-center justify-content-between" id="last-contact-selected">
                         <div class="d-flex" id="last-contact">
                             <div id="last-contact-avatar">
-                                <img :src="'./img/avatar' + contacts[indexContact].avatar + '.jpg'" alt="">  
+                                <img :src="'./img/avatar' + filteredAndSorted[indexContact].avatar + '.jpg'" alt="">  
                             </div>
                             <div id="last-contact-specs">
-                                <h6>{{contacts[indexContact].name}}</h6>
-                                <p> <span id="lastAccess" >Ultimo accesso {{contacts[indexContact].messages[messagesIndex].date}}</span></p>
+                                <h6>{{filteredAndSorted[indexContact].name}}</h6>
+                                <p> <span id="lastAccess" >Ultimo accesso  {{filteredAndSorted[indexContact].messages[messagesIndex].date}}</span></p>
                             </div>
                         </div>
                         <div id="chat-setting">
@@ -95,7 +96,7 @@
                     </div>
 
                     <div class="col" id="chat">
-                        <div v-for="message in contacts[indexContact].messages" :class="message.status">
+                        <div v-for="message in filteredAndSorted[indexContact].messages" :class="message.status">
                             {{message.text}}
                             <div>
                                 {{message.date}}
@@ -110,11 +111,11 @@
                         </div>
 
                         <div class="col " id="write-text">
-                            <input placeholder="Scrivi un messaggio" type="text">
+                            <input placeholder="Scrivi un messaggio"  v-model="massageInput" @keyup.enter="sendMessage()"  type="text">
                         </div>
 
                         <div class="d-flex align-items-center justify-content-center " id="send-vocal">
-                            <i class="fas fa-microphone"></i>
+                            <i  class="fas fa-microphone"></i>
                         </div>
                     </div>
                 </div>
