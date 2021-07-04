@@ -122,7 +122,6 @@ const app =  new Vue({
             this.indexContact = index
             console.log(this.indexContact)
             
-
         },
         
 
